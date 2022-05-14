@@ -1,6 +1,4 @@
 package config;
-
-
 import org.aeonbits.owner.Config;
 
 @Config.Sources({"classpath:resources/credentials.properties"})

@@ -13,10 +13,8 @@ import static io.qameta.allure.Allure.step;
 @Tag("new_app_test")
 public class WikipediaTests extends TestBase {
 
-
     @Test
     void searchTest() {
-
         //step("Pass start window", () ->
         $(MobileBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click();
         step("Type search", () -> {
@@ -26,5 +24,4 @@ public class WikipediaTests extends TestBase {
         step("Verify content found", () ->
                 $$(byClassName("android.widget.TextView")).shouldHave(sizeGreaterThan(0)));
     }
-
 }

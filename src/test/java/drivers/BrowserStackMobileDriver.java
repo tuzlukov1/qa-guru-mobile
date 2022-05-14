@@ -3,6 +3,7 @@ package drivers;
 import com.codeborne.selenide.WebDriverProvider;
 import config.Credentials;
 import io.appium.java_client.android.AndroidDriver;
+import org.aeonbits.owner.Config;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -13,7 +14,7 @@ public class BrowserStackMobileDriver implements WebDriverProvider {
 
     public static URL getBrowserStackUrl() {
         try {
-            return new URL("http://hub.browserstack.com/wd/hub");
+            return new URL(Credentials.config.url());
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
