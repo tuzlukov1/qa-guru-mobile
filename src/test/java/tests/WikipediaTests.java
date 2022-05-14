@@ -10,7 +10,6 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static io.qameta.allure.Allure.step;
 
-@Tag("new_app_test")
 public class WikipediaTests extends TestBase {
 
     @Test
