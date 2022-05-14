@@ -12,7 +12,6 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 import static helpers.Attach.getSessionId;
-import static helpers.Browserstack.videoUrl;
 
 
 public class TestBase {
@@ -22,7 +21,7 @@ public class TestBase {
         addListener("AllureSelenide", new AllureSelenide());
 
         Configuration.browser = BrowserStackMobileDriver.class.getName();
-        Configuration.startMaximized = false;
+        //Configuration.startMaximized = false;
         Configuration.browserSize = null;
     }
 
